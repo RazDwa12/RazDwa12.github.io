@@ -19,16 +19,30 @@
             max-width: 100%;
             height: auto;
         }
+        .image-description {
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="zabawa.jpg" alt="Michu Kox Steryd" class="image" id="image1" width="600" height="400">
-        <img src="zabawa2.jpg" alt="Michu Alkoholik" class="image" id="image2" style="display: none" width="600" height="400">
-        <img src="zabawa3.jpg" alt="Michu" class="image" id="image3" style="display: none" width="600" height="400">
-        <img src="zabawa4.jpg" alt="Idol" class="image" id="image4" style="display: none" width="600" height="400">
         <h1>Witaj na Mojej Stronie</h1>
-        <p>Przedstawiam ci moje niecodzienne podejście do halloween.</p>
+        <div>
+            <img src="zabawa.jpg" alt="Opis pierwszego zdjęcia" class="image" id="image1" width="600" height="400">
+            <p class="image-description">Michu to jednak Koks.</p>
+        </div>
+        <div>
+            <img src="zabawa2.jpg" alt="Opis drugiego zdjęcia" class="image" id="image2" style="display: none" width="600" height="400">
+            <p class="image-description">Michu .</p>
+        </div>
+        <div>
+            <img src="zabawa3.jpg" alt="Opis trzeciego zdjęcia" class="image" id="image3" style="display: none" width="600" height="400">
+            <p class="image-description">Michu to jednak Kokos.</p>
+        </div>
+        <div>
+            <img src="zabawa4.jpg" alt="Opis czwartego zdjęcia" class="image" id="image4" style="display: none" width="600" height="400">
+            <p class="image-description">No Way.</p>
+        </div>
         <button onclick="changeImage()">Zmień zdjęcie</button>
     </div>
 
@@ -38,7 +52,10 @@
 
         function changeImage() {
             var currentImageElement = document.getElementById("image" + currentImage);
+            var currentDescriptionElement = document.querySelector(".image-description");
+
             currentImageElement.style.display = "none";
+            currentDescriptionElement.style.display = "none";
 
             currentImage++;
             if (currentImage > totalImages) {
@@ -46,7 +63,10 @@
             }
 
             var nextImageElement = document.getElementById("image" + currentImage);
+            var nextDescriptionElement = document.querySelector(".image-description");
+
             nextImageElement.style.display = "block";
+            nextDescriptionElement.style.display = "block";
         }
     </script>
 </body>
