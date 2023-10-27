@@ -30,19 +30,19 @@
         <h1> Pewnie zazdrościsz </h1>
         <div>
             <img src="zabawa.jpg" alt="Michu to giga czadzior" class="image" id="image1" width="600" height="400">
-            <p class="image-description"></p>
+            <p class="image-description" id="description1">Opis pierwszego zdjęcia.</p>
         </div>
         <div>
             <img src="zabawa2.jpg" alt="Tylko on mógł na to wpaść" class="image" id="image2" style="display: none" width="600" height="400">
-            <p class="image-description"></p>
+            <p class="image-description" id="description2">Opis drugiego zdjęcia.</p>
         </div>
         <div>
             <img src="zabawa3.jpg" alt="pierdolony geniusz" class="image" id="image3" style="display: none" width="600" height="400">
-            <p class="image-description"></p>
+            <p class="image-description" id="description3">Opis trzeciego zdjęcia.</p>
         </div>
         <div>
             <img src="zabawa4.jpg" alt="No way" class="image" id="image4" style="display: none" width="600" height="400">
-            <p class="image-description"></p>
+            <p class="image-description" id="description4">Opis czwartego zdjęcia.</p>
         </div>
         <button onclick="changeImage()">Zmień zdjęcie</button>
     </div>
@@ -53,7 +53,7 @@
 
         function changeImage() {
             var currentImageElement = document.getElementById("image" + currentImage);
-            var currentDescriptionElement = document.querySelector(".image-description");
+            var currentDescriptionElement = document.getElementById("description" + currentImage);
 
             currentImageElement.style.display = "none";
             currentDescriptionElement.style.display = "none";
@@ -64,7 +64,7 @@
             }
 
             var nextImageElement = document.getElementById("image" + currentImage);
-            var nextDescriptionElement = document.querySelector(".image-description");
+            var nextDescriptionElement = document.getElementById("description" + currentImage);
 
             nextImageElement.style.display = "block";
             nextDescriptionElement.style.display = "block";
