@@ -25,8 +25,8 @@
     </style>
 </head>
 <body>
-    <!-- Dodaj muzykę w tle bez kontrolek, automatycznie odtwarzającą się -->
-    <audio autoplay loop>
+    <!-- Dodaj muzykę w tle -->
+    <audio controls autoplay loop>
         <source src="muzyka.mp3" type="audio/mpeg">
         Twoja przeglądarka nie obsługuje elementu audio.
     </audio>
@@ -47,7 +47,7 @@
             <p class="image-description" id="description3">Opis trzeciego zdjęcia.</p>
         </div>
         <div>
-            <img src="zabawa4.jpg" alt="No way" class="image" id "image4" style="display: none" width="600" height="400">
+            <img src="zabawa4.jpg" alt="No way" class="image" id="image4" style="display: none" width="600" height="400">
             <p class="image-description" id="description4">Opis czwartego zdjęcia.</p>
         </div>
         <button onclick="changeImage()">Zmień zdjęcie</button>
@@ -78,4 +78,3 @@
     </script>
 </body>
 </html>
-
